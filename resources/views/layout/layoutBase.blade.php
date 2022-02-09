@@ -7,6 +7,8 @@
     <title>@yield('TitleComponent')</title>
 </head>
 <body>
-    @yield('MainComponent');
+    <div class="container">
+        @yield('MainComponent')
+    </div>
 </body>
 </html>
