@@ -20,6 +20,8 @@
             <h4>{{$comic->sale_date}}</h4>
         </div>
     </div>
+    <p>{{$comic->description}}</p>
+
    
     
 @endsection

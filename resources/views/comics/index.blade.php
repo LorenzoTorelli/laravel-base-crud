@@ -33,8 +33,14 @@
                     <th>{{$comic->sale_date}}</th>
                     <th>{{$comic->type}}</th>
                     <th><a class="btn btn-primary" href="{{route("comics.show",$comic->id)}}" role="button">View</a></th>
-                    <th><a class="btn btn-info" href="{{route("comics.show",$comic->id)}}" role="button">Edit</a></th>
-                    <th><a class="btn btn-danger" href="#" role="button">Delete</a></th>
+                    <th><a class="btn btn-info" href="{{route("comics.edit",$comic->id)}}" role="button">Edit</a></th>
+                    <th>
+                        <form action="{{route('comics.destroy', $comic->id)}}" method="post">
+                            @csrf
+                            @method("DELETE")
+                            <button class="btn btn-danger" type="submit" >Delete</button>
+                        </form>
+                    </th>
 
 
                 </tr>
